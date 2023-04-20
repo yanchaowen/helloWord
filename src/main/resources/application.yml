@@ -1,0 +1,25 @@
+#数据库链接配置
+jdbc:
+   driverClassName: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://192.168.10.12:3306/test
+   username: root
+   password: 1234
+
+#yaml支持的数据类型
+#对象：键值对的集合，又称映射（mapping）/哈希（hashes）/字典（dictionary）
+#数组:一组按次序排列的值，又称为序列（sequence）/列表（list）
+#纯量（scalars）：单个的，不可再分的值
+person:
+  age: 18
+  name: 张三
+  birthday: 2023/04/20
+  isstudent: true
+  maps: {k1: v1,k2: v2}
+
+  lists:
+    - a
+    - b
+    - c
+  dog:
+     name: 小狗
+     age: 1
