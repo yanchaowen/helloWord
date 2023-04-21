@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface userMapper {
     @Select("select real_name from user where id = #{id}")
-    public String findById(int id);
+    public User findById(int id);
 }

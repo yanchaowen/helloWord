@@ -1,16 +1,13 @@
 package com.example.helloword.controller;
 
 import com.example.helloword.JdbcConfig;
+import com.example.helloword.User;
 import com.example.helloword.userMapper;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import javax.sql.DataSource;
 
 //@Controller
 @RestController
@@ -21,7 +18,7 @@ public class HelloController {
     @Resource
     private userMapper usermapper;
     @RequestMapping("/hello")
-    public String hello() {
+    public User hello() {
         System.out.println("dataSource:"+jdbcConfig.dataSource());
         System.out.println(usermapper.findById(1));
         //return "Hello World,my first springboot project!111222333";

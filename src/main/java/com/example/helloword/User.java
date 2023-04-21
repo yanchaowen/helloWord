@@ -92,6 +92,8 @@ public class User {
     public void setRemarks(String remarks) {
         this.remarks = remarks;
     }
-
+    public String toString(){
+        return "user { id"+id+"username="+userName+"password="+password+"age="+age+"}";
+    }
 
 }

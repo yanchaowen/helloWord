@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+</head>
+<body>
+<!-- 不存在则忽略，显示hello null!(可以通过默认值进行设置)-->
+<p th:text="'Hello ' + (${name}?:'admin')">3333</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+  </tr>
+  <tr th:each="emp : ${empList}">
+    <td th:text="${emp.id}">1</td>
+    <td th:text="${emp.name}">海</td>
+    <td th:text="${emp.age}">18</td>
+  </tr>
+</table>
+</body>
+</html>
